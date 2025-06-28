@@ -13,3 +13,15 @@ def count_characters(text):
             characters[char] = 0
         characters[char] = characters[char] +1
     return characters
+
+def sort_characters(char):
+    sorted_list = []
+    for i in char:
+        item = {"char" : i, "num": char[i]}
+        sorted_list.append(item)
+    sorted_list.sort(reverse=True, key=sort_by)
+    return sorted_list
+    
+
+def sort_by(item):
+    return item["num"]
